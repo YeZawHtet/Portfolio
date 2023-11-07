@@ -7,3 +7,5 @@
     backSpeed: 60,
     loop: true
   });
+
+  
