@@ -51,11 +51,12 @@ const liHome = document.querySelector('.lihome');
 const liAbout = document.querySelector('.liabout');
 const liServices = document.querySelector('.liservices');
 const liPortfolio = document.querySelector('.liportfolio');
-const liContact = document.querySelector('.licontact')
+const liContact = document.querySelector('.licontact');
 
 liHome.addEventListener('click', () => {
     if (home.classList.contains('.hidden')) {
         home.classList.remove('hidden');
+        aside.classList.remove('active');
     }
     home.classList.remove('hidden');
     about.classList.add('hidden');
@@ -105,4 +106,3 @@ liContact.addEventListener('click', () => {
 })
 
 //Menu for small devices
-

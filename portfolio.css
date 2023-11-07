@@ -6,6 +6,7 @@
     --bg-black-50: #e8dfec;
     --text-black-900: #302e4d;
     --text-black-700: #504e70;
+    --btn-color:#323232;
 }
 
 body.dark {
@@ -14,6 +15,7 @@ body.dark {
     --bg-black-50: #393939;
     --text-black-900: #ffffff;
     --text-black-700: #e9e9e9;
+    --btn-color:#929292;
 }
 html{
     scroll-behavior: smooth;
@@ -122,6 +124,7 @@ ul {
 
 .btn {
     display: inline-block;
+    position: relative;
     padding: 12px 35px;
     border: none;
     background: var(--skin-color);
@@ -129,12 +132,29 @@ ul {
     font-size: 16px;
     font-weight: 500;
     white-space: nowrap;
-    transition: all .3s ease;
-    border-radius: 40px;
+    transition: all 300ms ease;
 }
 
 .btn:hover {
-    transform: scale(1.05);
+    transform: scaleX(1);
+}
+.btn-background-slide:hover::before,
+.btn-background-slide:focus::before{
+transform: scaleX(1);
+}
+
+.btn-background-slide::before{
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index:-1;
+background-color: var(--btn-color);
+content: '';
+transform: scaleX(0);
+transform-origin: left;
+transition: transform 300ms ease-in-out;
 }
 
 .shadow-dark {
@@ -823,7 +843,6 @@ transform: scale(1.5);
 }
 
 @media (max-width:767px) {
-
     .contact .contact-form .col-6,
     .contact .contact-info-item,
     .service .service-item,
@@ -835,4 +854,28 @@ transform: scale(1.5);
         flex: 0 0 100%;
         max-width: 100%;
     }
+
+    /* Style for the hamburger menu button */
+.nav-toggler {
+    position: fixed;
+    top: 2%;
+    right: 4%;
+    z-index: 20000;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-toggler .bar {
+    width: 30px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: var(--skin-color);
+    border-radius: 2px;
+  }
+  .aside.active {
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.3s ease-in-out; 
+  }
 }

@@ -32,27 +32,28 @@
       <div class="logo">
         <a href="#"><span>D</span>anny</a>
       </div>
-      <div class="nav-toggler">
-        <span></span>
-      </div>
       <ul class="nav">
-        <li class="lihome">
-          <a href="#home" class="nav-link"><i class="fa fa-home"></i>Home</a>
+        <li class="lihome" data-section="home">
+          <a href="#home" class="nav-link active"><i class="fa fa-home"></i>Home</a>
         </li>
-        <li class="liabout">
+        <li class="liabout" data-section="about">
           <a href="#about" class="nav-link"><i class="fa fa-user"></i>About</a>
         </li>
-        <li class="liservices">
+        <li class="liservices" data-section="services">
           <a href="#services" class="nav-link"><i class="fa fa-list"></i>Services</a>
         </li>
-        <li class="liportfolio">
+        <li class="liportfolio" data-section="portfolio">
           <a href="#portfolio" class="nav-link"><i class="fa fa-briefcase"></i>Portfolio</a>
         </li>
-        <li class="licontact">
+        <li class="licontact" data-section="contact">
           <a href="#contact" class="nav-link"><i class="fa fa-comments"></i>Contact</a>
         </li>
       </ul>
-
+    </div>
+    <div class="nav-toggler">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
     </div>
     <!--====== Aside End ======-->
     <!--======main Content Start=====-->
@@ -73,7 +74,7 @@
                 Central Lancashire at UK. I'm developing websites starting from
                 2021. Welcome projects from you...
               </p>
-              <a href="#contact" class="btn hire-me">Hire Me</a>
+              <a href="#contact" class="btn hire-me btn-background-slide">Hire Me</a>
             </div>
             <div class="home-img padd-15" style="border-radius: 5rem;">
               <img src="img/profile.png" alt="Profile" />
@@ -96,7 +97,7 @@
                 <div class="about-text padd-15">
                   <h3>I'm <span>Web Developer</span></h3>
                   <p>
-                    I'm <b> self-taught developer</b> and specialize in HTML, CSS and
+                    I'm <b> self-taught developer</b> and specialize in
                     programming languages start from the end of 2019. I'm freely
                     welcome new experience related with web development projects from you.
                   </p>
@@ -126,6 +127,12 @@
                     </div>
                     <div class="info-item padd-15">
                       <p>
+                        Degree :<br />
+                        <span>B.Sc (Hons) Business Computing and Information Systems</span>
+                      </p>
+                    </div>
+                    <div class="info-item padd-15">
+                      <p>
                         Phone :<br />
                         <span>09899885101<br />
                           09798117191</span>
@@ -143,8 +150,8 @@
                   <div class="row">
                     <div class="buttons padd-15">
 
-                      <a href="https://drive.google.com/file/d/15ZR86-i7xKn11w9bY8LeCW7Wf7oQ8U68/view?usp=drive_link" class="btn" download>Download CV</a>
-                      <a href="#contact" class="btn hire-me">Hire Me</a>
+                      <a href="https://drive.google.com/file/d/15ZR86-i7xKn11w9bY8LeCW7Wf7oQ8U68/view?usp=drive_link" class="btn  btn-background-slide" download>Download CV</a>
+                      <a href="#contact" class="btn  btn-background-slide hire-me">Hire Me</a>
                     </div>
                   </div>
                 </div>
@@ -563,7 +570,7 @@
                 <div class="portfolio-img">
                   <img style="min-height: 20vh; max-width:30vw;" src="img/pos-sale-page.PNG" alt="sale form image" />
                 </div>
-              </div> 
+              </div>
               <h4 style="text-align: center;">POS sales Form</h4>
             </div>
             <!--====== portfolio item End ======-->
@@ -666,7 +673,7 @@
               <div class="row">
                 <div class="form-item col-12 padd-15">
                   <div class="form-group">
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="submit" class="btn  btn-background-slide">Send Message</button>
                   </div>
                 </div>
               </div>
@@ -716,14 +723,14 @@
   </script>
   <!-- JS Files -->
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <!-- AOS JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <!-- Initialize AOS -->
-    <script>
-      AOS.init({
-        duration: 1000, // Animation duration in milliseconds
-      });
-    </script>
+  <!-- AOS JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Initialize AOS -->
+  <script>
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+    });
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12.typed.min.js" referrerpolicy="no-referrer"></script>
   <script src="typing.js"></script>
   <script src="style-switcher.js"></script>
