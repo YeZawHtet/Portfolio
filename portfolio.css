@@ -17,11 +17,7 @@ body.dark {
     --text-black-700: #e9e9e9;
     --btn-color:#929292;
 }
-html{
-    scroll-behavior: smooth;
-}
 
-  
 html, body {
     width: 100vw;
     line-height: 1.5;
@@ -31,6 +27,7 @@ html, body {
     font-size: 16px;
     max-height: 100vh;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 * {
