@@ -614,8 +614,8 @@
               <div class="icon">
                 <i class="fa fa-map-marker-alt"></i>
               </div>
-              <h4>Office</h4>
-              <p>Trojan Web Dev</p>
+              <h4>Address</h4>
+              <p>Pyin Oo Lwin</p>
             </div>
             <!--Contact Info item End-->
             <!--Contact Info item Start-->
@@ -624,7 +624,8 @@
                 <i class="fa fa-envelope"></i>
               </div>
               <h4>Email</h4>
-              <p>trojan22yrs@gmail.com</p>
+              <p><a href="mailto:yezawhtet.web@gmail.com">yezawhtet.web@gmail.com</a>
+              </p>
             </div>
             <!--Contact Info item End-->
             <!--Contact Info item Start-->
@@ -705,22 +706,7 @@
   </div>
   <!-- === Style Switcher End === -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('.nav-link').click(function (e) {
-        e.preventDefault(); // Prevent default link behavior
-
-        $('.nav-link').removeClass('active'); // Remove active class from all links
-        $(this).addClass('active'); // Add active class to the clicked link
-
-        var target = $(this).data('target'); // Get the target section from data attribute
-        // Scroll to the target section using smooth scrolling if needed
-        $('html, body').animate({
-          scrollTop: $('#' + target).offset().top
-        }, 500);
-      });
-    });
-  </script>
+  
   <!-- JS Files -->
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   <!-- AOS JavaScript -->
@@ -734,32 +720,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12.typed.min.js" referrerpolicy="no-referrer"></script>
   <script src="typing.js"></script>
   <script src="style-switcher.js"></script>
-
-  <script>
-    // Get all the navigation links
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    // Function to handle the click event on navigation links
-    function handleNavClick(event) {
-      // Prevent default link behavior
-      event.preventDefault();
-
-      // Remove "active" class from all navigation links
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-      });
-
-      // Add "active" class to the clicked navigation link
-      event.target.classList.add('active');
-    }
-
-    // Attach click event listener to each navigation link
-    navLinks.forEach(link => {
-      link.addEventListener('click', handleNavClick);
-    });
-  </script>
-
-
 </body>
 
 </html>

@@ -20,7 +20,22 @@ body.dark {
 html{
     scroll-behavior: smooth;
 }
+/* Style the scrollbar */
+html::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  /* Style the scrollbar track */
+  html::-webkit-scrollbar-track {
+    background-color: var(--bg-black-900);
+  }
 
+  /* Style the scrollbar thumb and add animation */
+  html::-webkit-scrollbar-thumb {
+    background-color: var(--skin-color);
+    
+  }
+  
 body {
     line-height: 1.5;
     font-family: 'Poppins' sans-serif;
@@ -795,7 +810,6 @@ transform: scale(1.5);
         width: 100vh;
         height: 100vh;
         margin: 0 auto;
-        margin: 70px 10px;
         user-select: none;
     }
 
