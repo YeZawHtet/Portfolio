@@ -155,7 +155,13 @@ transform: scaleX(0);
 transform-origin: left;
 transition: transform 300ms ease-in-out;
 }
-
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+}
 .shadow-dark {
     box-shadow: 0 0 20px rgba(48, 46, 47, 0.15);
 }
