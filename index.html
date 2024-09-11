@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+  <!-- JS Files -->
+  <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
   <!--====== Style Switcher =========-->
   <link rel="stylesheet" href="css/color1.css" class="alternate-style" title="color-1" disabled />
   <link rel="stylesheet" href="css/color2.css" class="alternate-style" title="color-2" disabled />
@@ -20,11 +22,11 @@
   <link rel="stylesheet" href="css/color4.css" class="alternate-style" title="color-4" disabled />
   <link rel="stylesheet" href="css/color5.css" class="alternate-style" title="color-5" disabled />
   <link rel="stylesheet" href="css/styleSwitcher.css" />
-  <style>
-    .home-img img {
-      background: url(img/green-ink.mp4) right;
-    }
-  </style>
+
+  <!-- SweetAlert2 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <!-- SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
@@ -81,7 +83,7 @@
               <a href="#contact" class="btn hire-me btn-background-slide">Hire Me</a>
             </div>
             <div class="home-img padd-15" style="border-radius: 5rem;">
-              <img src="img/profile.png" alt="Profile" />
+              <img src="img/profile.png" style="border-radius: 20px;" alt="Profile" />
             </div>
           </div>
         </div>
@@ -114,10 +116,10 @@
                       <p>BirthDay : <span>10 June 2000</span></p>
                     </div>
                     <div class="info-item padd-15">
-                      <p>Age : <span>24</span></p>
+                      <p>Age : <span id="myAge"></span></p>
                     </div>
                     <div class="info-item padd-15">
-                      <p>Website : <span><a href="https://portfoliobyyzh.netlify.app/">portfoliobyyzh</a></span></p>
+                      <p>Website : <span><a href="https://yzhportfolio.vercel.app/">portfoliobyyzh</a></span></p>
                     </div>
                     <div class="info-item padd-15">
                       <p>Email : <span><a href="mailto:yezawhtet.web@gmail.com">yezawhtet.web@gmail.com</a></span></p>
@@ -132,14 +134,14 @@
                     <div class="info-item padd-15">
                       <p>
                         Degree :<br />
-                        <span>B.Sc (Hons) Business Computing and Information Systems</span>
+                        <span>B.Sc(Hons)Business Computing and Information Systems</span>
                       </p>
                     </div>
                     <div class="info-item padd-15">
                       <p>
                         Phone :<br />
                         <span>09899885101<br />
-                          09798117191</span>
+                          09792937638</span>
                       </p>
                     </div>
                     <div class="info-item padd-15">
@@ -152,7 +154,8 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="buttons padd-15"><!--https://drive.google.com/file/d/15ZR86-i7xKn11w9bY8LeCW7Wf7oQ8U68/view?usp=drive_link-->
+                    <div class="buttons padd-15">
+                      <!--https://drive.google.com/file/d/15ZR86-i7xKn11w9bY8LeCW7Wf7oQ8U68/view?usp=drive_link-->
                       <a href="img/Ye Zaw Htet CV.pdf" class="btn  btn-background-slide" download>Download CV</a>
                     </div>
                     <div class="buttons padd-15">
@@ -192,6 +195,20 @@
                       </div>
                     </div>
                     <div class="skill-item padd-15" data-aos="fade-up">
+                      <h5>React</h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 60%"></div>
+                        <div class="skill-percent">40%</div>
+                      </div>
+                    </div>
+                    <div class="skill-item padd-15" data-aos="fade-up">
+                      <h5>Vue</h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 60%"></div>
+                        <div class="skill-percent">40%</div>
+                      </div>
+                    </div>
+                    <div class="skill-item padd-15" data-aos="fade-up">
                       <h5>PHP</h5>
                       <div class="progress">
                         <div class="progress-in" style="width: 70%"></div>
@@ -199,7 +216,21 @@
                       </div>
                     </div>
                     <div class="skill-item padd-15" data-aos="fade-up">
+                      <h5>Laravel</h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 70%"></div>
+                        <div class="skill-percent">60%</div>
+                      </div>
+                    </div>
+                    <div class="skill-item padd-15" data-aos="fade-up">
                       <h5>C# (.Net Windows Forms App)</h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 60%"></div>
+                        <div class="skill-percent">60%</div>
+                      </div>
+                    </div>
+                    <div class="skill-item padd-15" data-aos="fade-up">
+                      <h5>MySQL</h5>
                       <div class="progress">
                         <div class="progress-in" style="width: 60%"></div>
                         <div class="skill-percent">60%</div>
@@ -246,7 +277,7 @@
                           </h3>
                           <h4 class="timeline-title">B.Sc(Hons)BCIS</h4>
                           <p class="timeline-text">
-                            Still waiting for taking degree
+                            Graduated in 2023
                           </p>
                         </div>
                       </div>
@@ -330,10 +361,10 @@
                         <div class="timeline-item">
                           <div class="circle-dot"></div>
                           <h3 class="timeline-date">
-                            <i class="fa fa-calendar"></i>2021 to Now
+                            <i class="fa fa-calendar"></i>2021 to <span id="currentYear"></span>
                           </h3>
                           <h4 class="timeline-title">
-                            Created mini projects using JAVASCRIPT
+                            Here are mini projects using JAVASCRIPT
                           </h4>
                           <p class="timeline-text">
                             Music Player<br />
@@ -342,6 +373,8 @@
                             Tabs Menu<br />
                             Hamburger Menu<br />
                             Auto Complete text <br />
+                            Bird Gallery with React <br />
+                            Expense Tracker with React <br />
                           </p>
                         </div>
                       </div>
@@ -371,7 +404,7 @@
                 </div>
                 <h4>Web Design</h4>
                 <p>
-                  Designing websites such as converting figma to html,css.
+                  Designing websites such as converting figma to Code.
                 </p>
               </div>
             </div>
@@ -383,7 +416,7 @@
                   <i class="fa fa-laptop-code"></i>
                 </div>
                 <h4>Web Development</h4>
-                <p>Developing BackEnd Development with PHP and MySql.</p>
+                <p>Developing BackEnd Development with PHP, Laravel and MySQL.</p>
               </div>
             </div>
             <!--====service item End===-->
@@ -394,7 +427,7 @@
                   <i class="fa fa-code"></i>
                 </div>
                 <h4>Website Hosting</h4>
-                <p>Hosting my own website with GitHub Pages and 000webhost Website.</p>
+                <p>Hosting with GitHub Pages, 000webhost, Vercel, Netlify Website.</p>
               </div>
             </div>
             <!--====service item End===-->
@@ -420,7 +453,7 @@
           </div>
           <div class="row" style="border-radius:20px;">
             <!--====== portfolio item start ======-->
-            <div class="portfolio item padd-15 col-sm-4" style="padding-top:10px;">
+            <div class="testing portfolio item padd-15 col-sm-4" style="padding-top:10px;">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
                   <img style="min-height: 20vh; max-width:30vw;" src="img/tutor.png" alt="" />
@@ -429,7 +462,7 @@
             </div>
             <!--====== portfolio item End ======-->
             <!--====== portfolio item start ======-->
-            <div class="portfolio item padd-15 col-sm-4" style="padding-top:10px;">
+            <div class="testing portfolio item padd-15 col-sm-4" style="padding-top:10px;">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
                   <img style="min-height: 20vh; max-width:30vw;" src="img/8.PNG" alt="" />
@@ -438,16 +471,16 @@
             </div>
             <!--====== portfolio item End ======-->
             <!--====== portfolio item start ======-->
-            <div class="portfolio item padd-15 col-sm-4" style="padding-top:10px; margin-bottom: 20px;">
+            <div class="testing portfolio item padd-15 col-sm-4" style="padding-top:10px;">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
-                  <img style="min-height: 20vh; max-width:30vw;" src="img/music player.PNG" alt="" />
+                  <img style="min-height: 20vh; max-width:30vw;" src="img/tutor.PNG" alt="" />
                 </div>
               </div>
             </div>
             <!--====== portfolio item End ======-->
             <!--====== portfolio item start ======-->
-            <div class="portfolio item padd-15 col-sm-4" style="padding-top:10px;">
+            <div class="testing portfolio item padd-15 col-sm-4" style="padding-top:10px;">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
                   <img style="min-height: 20vh; max-width:30vw;" src="img/tutor.PNG" alt="" />
@@ -463,7 +496,7 @@
           </div>
           <div class="row" style="border-radius:20px;">
             <!--====== portfolio item start ======-->
-            <div class="portfolio item padd-15 col-sm-4" style="padding-top:10px;">
+            <div class="testing portfolio item padd-15 col-sm-4" style="padding-top:10px;">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
                   <img style="min-height: 20vh; max-width:30vw;" src="img/travelling_home.PNG" alt="Travelling Image" />
@@ -472,34 +505,36 @@
             </div>
             <!--====== portfolio item End ======-->
             <!--====== portfolio item start ======-->
-            <div class="portfolio item padd-15 col-sm-4" style="padding-top:10px;">
+            <div class="testing portfolio item padd-15 col-sm-4" style="padding-top:10px;">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
-                  <img style="min-height: 20vh; max-width:30vw;" src="img/travelling_admindashboard.PNG" alt="Travelling Image" />
+                  <img style="min-height: 20vh; max-width:30vw;" src="img/travelling_admindashboard.PNG"
+                    alt="Travelling Image" />
                 </div>
               </div>
             </div>
             <!--====== portfolio item End ======-->
             <!--====== portfolio item start ======-->
-            <div class="portfolio item padd-15 col-sm-4" style="padding-top:10px; margin-bottom: 20px;">
+            <div class="testing portfolio item padd-15 col-sm-4" style="padding-top:10px;">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
-                  <img style="min-height: 20vh; max-width:30vw;" src="img/travelling_bookingmanage.PNG" alt="Travelling Booking Manage Image" />
+                  <img style="min-height: 20vh; max-width:30vw;" src="img/travelling_bookingmanage.PNG"
+                    alt="Travelling Booking Manage Image" />
                 </div>
               </div>
             </div>
             <!--====== portfolio item End ======-->
             <!--====== portfolio item start ======-->
-            <div class="portfolio item padd-15 col-sm-4" style="padding-top:10px;">
+            <div class="testing portfolio item padd-15 col-sm-4" style="padding-top:10px;">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
-                  <img style="min-height: 20vh; max-width:30vw;" src="img/travelling_newtripaddpage.PNG" alt="travelling New Trip Data Insert image" />
+                  <img style="min-height: 20vh; max-width:30vw;" src="img/travelling_newtripaddpage.PNG"
+                    alt="travelling New Trip Data Insert image" />
                 </div>
               </div>
             </div>
             <!--====== portfolio item End ======-->
           </div>
-          <!-- Website 2 -->
           <!-- Website 3 -->
           <hr style="margin: 30px 0;">
           <div class="portfolio-heading">
@@ -507,7 +542,7 @@
           </div>
           <div class="row" style="border-radius:20px;">
             <!--====== portfolio item start ======-->
-            <div class="portfolio item padd-15 col-sm-4" style="padding-top:10px;">
+            <div class="testing portfolio item padd-15 col-sm-4" style="padding-top:10px;">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
                   <img style="min-height: 20vh; max-width:30vw;" src="img/cybertech-web-home.png" alt="" />
@@ -517,7 +552,7 @@
             </div>
             <!--====== portfolio item End ======-->
             <!--====== portfolio item start ======-->
-            <div class="portfolio item padd-15 col-sm-4" style="padding-top:10px;">
+            <div class="testing portfolio item padd-15 col-sm-4" style="padding-top:10px;">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
                   <img style="min-height: 20vh; max-width:30vw;" src="img/cybertech-web-learn.PNG" alt="" />
@@ -527,7 +562,7 @@
             </div>
             <!--====== portfolio item End ======-->
             <!--====== portfolio item start ======-->
-            <div class="portfolio item padd-15 col-sm-4" style="padding-top:10px; margin-bottom: 20px;">
+            <div class="testing portfolio item padd-15 col-sm-4" style="padding-top:10px;">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
                   <img style="min-height: 20vh; max-width:30vw;" src="img/cybertech-web-library.PNG" alt="" />
@@ -537,7 +572,7 @@
             </div>
             <!--====== portfolio item End ======-->
             <!--====== portfolio item start ======-->
-            <div class="portfolio item padd-15 col-sm-4" style="padding-top:10px;">
+            <div class="testing portfolio item padd-15 col-sm-4" style="padding-top:10px;">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
                   <img style="min-height: 20vh; max-width:30vw;" src="img/cybertech-web-admin1.PNG" alt="" />
@@ -547,7 +582,7 @@
             </div>
             <!--====== portfolio item End ======-->
           </div>
-          <!-- Website 3 -->
+          <!-- Website 4 -->
           <!-- Windows Forms App -->
           <hr style="margin: 30px 0;">
           <div class="portfolio-heading">
@@ -555,7 +590,7 @@
           </div>
           <div class="row" style="border-radius:20px;">
             <!--====== portfolio item start ======-->
-            <div class="portfolio item padd-15 col-sm-4" style="padding-top:10px;">
+            <div class="testing portfolio item padd-15 col-sm-4" style="padding-top:10px;">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
                   <img style="min-height: 20vh; max-width:30vw;" src="img/pos-login-form.png" alt="login form image" />
@@ -565,17 +600,18 @@
             </div>
             <!--====== portfolio item End ======-->
             <!--====== portfolio item start ======-->
-            <div class="portfolio item padd-15 col-sm-4" style="padding-top:10px;">
+            <div class="testing portfolio item padd-15 col-sm-4" style="padding-top:10px;">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
-                  <img style="min-height: 20vh; max-width:30vw;" src="img/pos-receipt-page.PNG" alt="receipt form image" />
+                  <img style="min-height: 20vh; max-width:30vw; min-width: 30vw;" src="img/pos-receipt-page.PNG"
+                    alt="receipt form image" />
                 </div>
               </div>
               <h4 style="text-align: center;">POS receipt Form</h4>
             </div>
             <!--====== portfolio item End ======-->
             <!--====== portfolio item start ======-->
-            <div class="portfolio item padd-15 col-sm-4" style="padding-top:10px; margin-bottom: 20px;">
+            <div class="testing portfolio item padd-15 col-sm-4" style="padding-top:10px;">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
                   <img style="min-height: 20vh; max-width:30vw;" src="img/pos-sale-page.PNG" alt="sale form image" />
@@ -585,17 +621,18 @@
             </div>
             <!--====== portfolio item End ======-->
             <!--====== portfolio item start ======-->
-            <div class="portfolio item padd-15 col-sm-4" style="padding-top:10px;">
+            <div class="testing portfolio item padd-15 col-sm-4" style="padding-top:10px;">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
-                  <img style="min-height: 20vh; max-width:30vw;" src="img/pos-sale-list-page.PNG" alt="sale list image" />
+                  <img style="min-height: 20vh; max-width:30vw;" src="img/pos-sale-list-page.PNG"
+                    alt="sale list image" />
                 </div>
               </div>
               <h4 style="text-align: center;">POS sale history Form</h4>
             </div>
             <!--====== portfolio item End ======-->
           </div>
-          <!-- Website 2 -->
+          <!-- Website 4 -->
         </div>
       </section>
       <!--=====Portfolio Section End====-->
@@ -645,7 +682,7 @@
                 <i class="fa fa-globe-europe"></i>
               </div>
               <h4>Website</h4>
-              <a href="https://trojanportfolio.netlify.app/">Trojan Portfolio Website</a>
+              <a href="https://yzhportfolio.vercel.app/">My Portfolio Website</a>
             </div>
             <!--Contact Info item End-->
           </div>
@@ -654,43 +691,51 @@
             I'M VERY RESPONSE TO MESSAGES
           </h4>
           <!--===== Contact Form ======-->
-          <div class="row">
-            <div class="contact-form padd-15">
-              <div class="row">
-                <div class="form-item col-6 padd-15">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Name" />
+          <form id="contact-form">
+            <div class="row">
+              <div class="contact-form padd-15">
+                <div class="row">
+                  <div class="form-item col-6 padd-15">
+                    <div class="inputdiv form-group">
+                      <input type="text" id="name" class="form-control inputstyle" placeholder="Name" required />
+                      <span class="bottom inputspan"></span>
+                      <span class="right inputspan"></span>
+                      <span class="top inputspan"></span>
+                      <span class="left inputspan"></span>
+                    </div>
+                  </div>
+                  <div class="form-item col-6 padd-15">
+                    <div class="inputdiv form-group">
+                      <input type="email" id="email" class="form-control inputstyle" placeholder="Email" required />
+                      <span class="bottom inputspan"></span>
+                      <span class="right inputspan"></span>
+                      <span class="top inputspan"></span>
+                      <span class="left inputspan"></span>
+                    </div>
                   </div>
                 </div>
-                <div class="form-item col-6 padd-15">
-                  <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email" />
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <div class="inputdiv form-group">
+                      <textarea id="message" class="form-control inputstyle" id="" placeholder="Message" required></textarea>
+                      <span class="bottom inputspan"></span>
+                      <span class="right inputspan"></span>
+                      <span class="top inputspan"></span>
+                      <span class="left inputspan"></span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="form-item col-12 padd-15">
-                  <div class="form-group">
-                    <textarea name="" class="form-control" id="" placeholder="Message"></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="form-item col-12 padd-15">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Subject" />
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="form-item col-12 padd-15">
-                  <div class="form-group">
-                    <button type="submit" class="btn  btn-background-slide">Send Message</button>
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                      <button type="submit" class="btn  btn-background-slide">Send Message</button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </form>
+          <p id="response"></p>
         </div>
       </section>
       <!--=====Contact Section End====-->
@@ -718,8 +763,7 @@
   <!-- === Style Switcher End === -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <!-- JS Files -->
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
   <!-- AOS JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <!-- Initialize AOS -->
@@ -728,9 +772,61 @@
       duration: 1000, // Animation duration in milliseconds
     });
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12.typed.min.js" referrerpolicy="no-referrer"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12.typed.min.js" referrerpolicy="no-referrer"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="typing.js"></script>
   <script src="style-switcher.js"></script>
+  <script>
+    function calculateAge(birthDate) {
+      const diff = Date.now() - new Date(birthDate).getTime();
+      const ageDate = new Date(diff);
+      return Math.abs(ageDate.getUTCFullYear() - 1970);
+    }
+
+    const myAge = calculateAge('2000-06-10');
+    const currentYear = new Date().getFullYear();
+    document.getElementById("myAge").innerHTML = myAge;
+    document.getElementById("currentYear").innerHTML = currentYear;
+
+    // email function
+
+    // Initialize EmailJS
+    emailjs.init('Pvxvc_lMDNl8wSMa-'); // Replace with your EmailJS user ID
+
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the form from submitting the normal way
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      const templateParams = {
+        name: name,
+        email: email,
+        message: message,
+      };
+
+      emailjs.send('service_k1bxb8m', 'template_71svwwo', templateParams)
+        .then(function (response) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Message Sent!',
+            text: 'Thank you for Contact to Me!',
+            showConfirmButton: false,
+            timer: 3000 // Closes after 3 seconds
+          });
+          console.log('SUCCESS!', response.status, response.text);
+        }, function (error) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Sorry, Busy Time! Try another time. Thank You!',
+          });
+          console.log('FAILED...', error);
+        });
+    });
+
+  </script>
 </body>
 
 </html>
