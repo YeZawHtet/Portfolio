@@ -652,7 +652,7 @@ h3.my-profession {
     position: relative;
     outline: none;
     border: none;
-    /* background-color: hsl(236, 32%, 26%); */
+    background-color: var(--skin-color);
 }
 
 .testing:hover {
@@ -668,8 +668,6 @@ h3.my-profession {
     left: 0;
     right: 0;
     border: 1px solid var(--skin-color);
-    /* transform-origin: center; */
-    /* transform: scale(1.1); */
 }
 
 .testing:hover::before {
@@ -697,9 +695,9 @@ h3.my-profession {
 }
 
 .portfolio .portfolio-item {
-    flex: 0 0 33.3%;
+    flex: 0 0 50%;
     margin-bottom: 30px;
-    max-width: 33.3%;
+    max-width: 50%;
 }
 
 .portfolio .portfolio-item-inner {
@@ -712,6 +710,10 @@ h3.my-profession {
     display: block;
     width: 100%;
     max-height: 350px;
+}
+
+.portfolio-subtitle{
+    color: black;
 }
 
 /* Contact */

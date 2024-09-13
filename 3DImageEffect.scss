@@ -1,0 +1,80 @@
+$n: 16; /* number of spikes */
+
+@property --a {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: true;
+}
+@property --i {
+  syntax: "<length>";
+  initial-value: 0px;
+  inherits: true;
+}
+@property --p {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: true;
+}
+
+.profile-img {
+  --r: 180px; /* control the size of the image */
+  --p: 0.2;  /* control the size of the spikes (a uniteless value). It's a percentage of --r */
+  --f: 1.2; /* the scale factor */
+  --c: #E4844A; /* the main color */
+  --bg: #E0E4CC; /* the color behind the element (the body background here). I didn't find a fully transparent solution */
+  
+  --angle: atan(sin(180deg/#{$n})/(var(--p) - 1 + cos(180deg/#{$n})));
+  height: calc(2*var(--r));
+  padding-top: calc(2*var(--r));
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  object-fit: cover;
+  object-position: top;
+  $m: ();$c: ();
+  @for $i from 0 through ($n - 1) {
+    $m: append($m, 
+         conic-gradient(
+           from calc(90deg + 360deg*#{$i/$n} - var(--angle) + var(--a,0deg)) at  
+           calc(50% + (50%*(1 - var(--p)) - var(--i,0px))*cos(360deg*#{$i/$n} + var(--a,0deg)))
+           calc(50% + (50%*(1 - var(--p)) - var(--i,0px))*sin(360deg*#{$i/$n} + var(--a,0deg)))
+           ,var(--bg) calc(2*var(--angle)),#0000 0),
+        comma);
+    $c: append($c,source-over,comma);
+   }
+  -webkit-mask: 
+    linear-gradient(#000 0 0) top/100% 50% no-repeat,
+    linear-gradient(#000 0 0),
+    $m;
+  -webkit-mask-composite: source-over,xor,$c;
+  mask: 
+    linear-gradient(#000 0 0) top/100% 50% no-repeat,
+    linear-gradient(#000 0 0) exclude,
+    $m;
+  background: $m,var(--c);
+  --_a: rotate linear infinite;
+  animation: 
+    var(--_a) 10s,
+    var(--_a) 16s reverse;
+  animation-composition: add;
+  cursor: pointer;
+  clip-path: circle(50%); /* better than border radius*/
+  transition: --i .4s,--p .4s, padding .7s;
+}
+img:hover {
+  --i: calc(var(--r)*(1 - var(--p))*(var(--f) - 1)/var(--f));
+  --p: 0.3; /* we update the size of spike a little */
+  padding: 0;
+  animation-play-state: running, paused;
+}
+@keyframes rotate {
+  to{--a:360deg}
+}
+
+// body {
+//   margin: 0;
+//   min-height: 100vh;
+//   display: grid;
+//   place-content: center;
+//   grid-auto-flow: column;
+//   background: #E0E4CC;
+// }
